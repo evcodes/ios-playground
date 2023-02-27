@@ -12,4 +12,3 @@ struct Car{
         return details
     }
 }
-
