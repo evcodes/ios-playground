@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // state property that is mutable
+    @State private var playerCard = "back"
+    @State private var cpuCard = "back"
+    @State private var playerScore:Int = 0
+    @State private var cpuScore:Int = 0
+    
     var body: some View {
-        
         ZStack{
             Image("background")
                 .resizable()
@@ -20,13 +26,34 @@ struct ContentView: View {
                 Spacer()
                 HStack{
                     Spacer()
-                    Image("card3")
+                    Image(playerCard)
                     Spacer()
-                    Image("card4")
+                    Image(cpuCard)
                     Spacer()
                 }
                 Spacer()
-                Image("dealbutton")
+                
+                //Deal Button
+                Button(action: {
+                    
+                    //rand num generate 2-14
+                    let playerRand = Int.random(in: 2...14)
+                    let cpuRand = Int.random(in: 2...14)
+                    
+                    //update cards
+                    playerCard = "card" + String(playerRand)
+                    cpuCard = "card" + String(cpuRand)
+                    
+                    if (playerRand > cpuRand) {
+                        playerScore += 1
+                    }else if (cpuRand > playerRand) {
+                        cpuScore += 1
+                    }
+                    
+                }) {
+                    Image("dealbutton")
+                }
+                
                 Spacer()
                 HStack{
                     Spacer()
@@ -34,7 +61,7 @@ struct ContentView: View {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                     }.foregroundColor(Color.white)
                     Spacer()
@@ -43,7 +70,7 @@ struct ContentView: View {
                             .font(.headline)
                             .padding(.bottom, 10.0)
                             
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                     }.foregroundColor(Color.white)
                     Spacer()
