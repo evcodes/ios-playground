@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct PlayingCard {
+struct PlayingCard:Equatable {
     // Ace is 1, King is 13
     var playingCard: Int
     // Spade = 0, Diamonds = 1, Club = 2, Hearts = 3
@@ -18,7 +18,6 @@ struct PlayingCard {
 struct ContentView: View {
     @State var deck = [PlayingCard]()
     @State var message = "Welcome to the game.\nHere's where you'll be reading the information from button presses"
-    @State var generatedLog = [String]()
     
     let suits = ["Diamonds", "Spades", "Hearts", "Clubs"]
     let card = ["Ace", "2","3","4","5","6","7","8","9","10","Jack", "Queen", "King"]
@@ -46,12 +45,10 @@ struct ContentView: View {
         let suit = Int.random(in: 0...3)
         let num = Int.random(in: 0...12)
         let newCard = PlayingCard(playingCard: num, playCardSuit: suit)
-        let newString = "Generated a \(num) of \(suit)"
         
-        if generatedLog.contains(newString){
+        if deck.contains(newCard){
             message = "Sorry, generated a duplicate card. Please try again!"
         }else{
-            generatedLog.append(newString)
             deck.append(newCard)
             
             message = "Generated a \(card[num]) of \(suits[suit])"
