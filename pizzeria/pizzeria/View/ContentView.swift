@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var myPizzeria = PizzaModel()
     var body: some View {
         VStack {
             Text("Welcome to the pizzeria")
-            
-            List(PizzaModel().pizzas){ pizza in
+            List(myPizzeria.pizzas){ pizza in
                 VStack(alignment: .leading){
                     Text(pizza.name).font(.title)
                     HStack {
                         Text(pizza.topping1)
                         Text(pizza.topping2)
                         Text(pizza.topping3)
+                        }
                     }
-                   
-                }
+                
                 .padding(0.0)
+            }
+            Spacer()
+            Button("Add Hawaiian"){
+                myPizzeria.makeHawaiian()
             }
         }
     }
