@@ -20,7 +20,7 @@ class PizzaModel: ObservableObject {
     }
     func makeHawaiian(){
         for i in 0...pizzas.count-1{
-            pizzas[i].topping1 = "Pineapple"
+            pizzas[i].topping1 = "Pine"
         }
         
     }
