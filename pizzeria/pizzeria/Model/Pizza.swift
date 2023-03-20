@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Pizza: Identifiable {
-    var id = UUID()
+class Pizza: Identifiable, Decodable {
+    var id: UUID?;
     var name: String;
-    var topping1: String;
-    var topping2: String;
-    var topping3: String;
+    var imageName: String;
+    var ingredient1: String;
+    var ingredient2: String;
 }

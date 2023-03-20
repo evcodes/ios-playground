@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Meat Lovers",
+        "imageName": "meatLovers",
+        "ingredient1": "Pepperoni",
+        "ingredient2": "Sausage"
+    },
+    
+    {
+        "name": "Hawaiian",
+        "imageName": "hawaiian",
+        "ingredient1": "Pineapple",
+        "ingredient2": "Ham"
+        
+    },
+    {
+        "name": "Pepperoni",
+        "imageName": "pepperoni",
+        "ingredient1": "Pepperoni",
+        "ingredient2": "Cheese"
+    }
+]

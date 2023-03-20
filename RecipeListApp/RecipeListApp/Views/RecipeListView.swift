@@ -18,7 +18,7 @@ struct RecipeListView: View {
                 Image(r.image)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 50, height:50, alignment: .center)
+                    .frame(width: 120, height:80, alignment: .center)
                     .clipped()
                     .cornerRadius(5)
                     .padding(.trailing)
