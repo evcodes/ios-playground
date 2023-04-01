@@ -15,6 +15,7 @@
 		C01EBC5529C636F80032A915 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01EBC5429C636F80032A915 /* Recipe.swift */; };
 		C01EBC5729C6384B0032A915 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01EBC5629C6384B0032A915 /* RecipeModel.swift */; };
 		C01EBC5929C639910032A915 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01EBC5829C639910032A915 /* DataService.swift */; };
+		C044FFA529D7272000432C9C /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044FFA429D7272000432C9C /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C01EBC5629C6384B0032A915 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		C01EBC5829C639910032A915 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		C01EBC5A29C646BA0032A915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C044FFA429D7272000432C9C /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				C01EBC4129C633190032A915 /* RecipeListView.swift */,
+				C044FFA429D7272000432C9C /* RecipeDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01EBC5529C636F80032A915 /* Recipe.swift in Sources */,
+				C044FFA529D7272000432C9C /* RecipeDetailView.swift in Sources */,
 				C01EBC5729C6384B0032A915 /* RecipeModel.swift in Sources */,
 				C01EBC4229C633190032A915 /* RecipeListView.swift in Sources */,
 				C01EBC4029C633190032A915 /* RecipeListApp.swift in Sources */,

@@ -13,17 +13,24 @@ struct RecipeListView: View {
     @ObservedObject var model = RecipeModel()
     
     var body: some View {
-        List(model.recipes){ r in
-            HStack(spacing: 0.52 ){
-                Image(r.image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 120, height:80, alignment: .center)
-                    .clipped()
-                    .cornerRadius(5)
-                    .padding(.trailing)
-                Text(r.name)
-            }
+        NavigationView {
+            List(model.recipes){ r in
+                NavigationLink (
+                    destination: RecipeDetailView(recipe: r),
+                    label: {
+                        //MARK: row item
+                        HStack(spacing:20.0){
+                            Image(r.image)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height:50)
+                                .cornerRadius(5)
+                            Spacer()
+                            Text(r.name)
+                        }
+                    }
+                )
+            }.navigationBarTitle("My Recipes")
         }
     }
 }
